@@ -31,6 +31,8 @@ namespace OtusGraduationWork
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.gbFolders = new System.Windows.Forms.GroupBox();
+            this.lbTablesSize = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
             this.lbTableCount = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.lbIndexCount = new System.Windows.Forms.Label();
@@ -57,41 +59,40 @@ namespace OtusGraduationWork
             this.tbStoragePath = new System.Windows.Forms.TextBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.btSelectAddValue = new System.Windows.Forms.Button();
+            this.label13 = new System.Windows.Forms.Label();
+            this.pbAddValue = new System.Windows.Forms.PictureBox();
+            this.tbAddKey = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.btAddRecord = new System.Windows.Forms.Button();
             this.nmAddKeysInterval = new System.Windows.Forms.NumericUpDown();
             this.cbAddRandomKeys = new System.Windows.Forms.CheckBox();
             this.btAddRecords = new System.Windows.Forms.Button();
             this.nmAddRecordCount = new System.Windows.Forms.NumericUpDown();
             this.label8 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tbRemoveKey = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.btRemoveKey = new System.Windows.Forms.Button();
             this.nmRemoveKeysInterval = new System.Windows.Forms.NumericUpDown();
             this.cbRemoveRandomKeys = new System.Windows.Forms.CheckBox();
             this.btRemoveRecords = new System.Windows.Forms.Button();
             this.nmRemoveRecordCount = new System.Windows.Forms.NumericUpDown();
             this.label11 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.folderBrowserDialog = new System.Windows.Forms.FolderBrowserDialog();
-            this.btAddRecord = new System.Windows.Forms.Button();
-            this.label12 = new System.Windows.Forms.Label();
-            this.tbAddKey = new System.Windows.Forms.TextBox();
-            this.pbAddValue = new System.Windows.Forms.PictureBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.btSelectAddValue = new System.Windows.Forms.Button();
-            this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
-            this.nmFindKeysInterval = new System.Windows.Forms.NumericUpDown();
-            this.cbFindRandomKeys = new System.Windows.Forms.CheckBox();
-            this.btFindRecords = new System.Windows.Forms.Button();
-            this.nmFindRecordCount = new System.Windows.Forms.NumericUpDown();
-            this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.pbFindValue = new System.Windows.Forms.PictureBox();
             this.tbFindKey = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.btFindRecord = new System.Windows.Forms.Button();
-            this.lbTablesSize = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.tbRemoveKey = new System.Windows.Forms.TextBox();
-            this.label17 = new System.Windows.Forms.Label();
-            this.btRemoveKey = new System.Windows.Forms.Button();
+            this.nmFindKeysInterval = new System.Windows.Forms.NumericUpDown();
+            this.cbFindRandomKeys = new System.Windows.Forms.CheckBox();
+            this.btFindRecords = new System.Windows.Forms.Button();
+            this.nmFindRecordCount = new System.Windows.Forms.NumericUpDown();
+            this.label14 = new System.Windows.Forms.Label();
+            this.folderBrowserDialog = new System.Windows.Forms.FolderBrowserDialog();
+            this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
+            this.button1 = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.gbFolders.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nmLogLimit)).BeginInit();
@@ -99,16 +100,16 @@ namespace OtusGraduationWork
             ((System.ComponentModel.ISupportInitialize)(this.nmPartSize)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAddValue)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nmAddKeysInterval)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nmAddRecordCount)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nmRemoveKeysInterval)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nmRemoveRecordCount)).BeginInit();
             this.tabPage3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbAddValue)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFindValue)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nmFindKeysInterval)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nmFindRecordCount)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbFindValue)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -131,6 +132,7 @@ namespace OtusGraduationWork
             this.gbFolders.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.gbFolders.Controls.Add(this.button1);
             this.gbFolders.Controls.Add(this.lbTablesSize);
             this.gbFolders.Controls.Add(this.label18);
             this.gbFolders.Controls.Add(this.lbTableCount);
@@ -164,6 +166,24 @@ namespace OtusGraduationWork
             this.gbFolders.TabIndex = 0;
             this.gbFolders.TabStop = false;
             // 
+            // lbTablesSize
+            // 
+            this.lbTablesSize.AutoSize = true;
+            this.lbTablesSize.ForeColor = System.Drawing.Color.Gray;
+            this.lbTablesSize.Location = new System.Drawing.Point(747, 396);
+            this.lbTablesSize.Name = "lbTablesSize";
+            this.lbTablesSize.Size = new System.Drawing.Size(0, 32);
+            this.lbTablesSize.TabIndex = 28;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(22, 396);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(409, 32);
+            this.label18.TabIndex = 27;
+            this.label18.Text = "Размер данных SsTable, байт";
+            // 
             // lbTableCount
             // 
             this.lbTableCount.AutoSize = true;
@@ -178,9 +198,9 @@ namespace OtusGraduationWork
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(22, 477);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(271, 32);
+            this.label10.Size = new System.Drawing.Size(283, 32);
             this.label10.TabIndex = 25;
-            this.label10.Text = "Количество таблиц";
+            this.label10.Text = "Количество SsTable";
             // 
             // lbIndexCount
             // 
@@ -196,9 +216,9 @@ namespace OtusGraduationWork
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(22, 436);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(370, 32);
+            this.label9.Size = new System.Drawing.Size(409, 32);
             this.label9.TabIndex = 23;
-            this.label9.Text = "Кол-во элементов индекса";
+            this.label9.Text = "Кол-во элементов в memtable";
             // 
             // lbIndexSize
             // 
@@ -214,9 +234,9 @@ namespace OtusGraduationWork
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(22, 352);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(307, 32);
+            this.label7.Size = new System.Drawing.Size(324, 32);
             this.label7.TabIndex = 21;
-            this.label7.Text = "Размер индекса, байт";
+            this.label7.Text = "Размер memtable, байт";
             // 
             // lbLogLimit
             // 
@@ -261,7 +281,7 @@ namespace OtusGraduationWork
             this.btInitStorage.Name = "btInitStorage";
             this.btInitStorage.Size = new System.Drawing.Size(215, 50);
             this.btInitStorage.TabIndex = 15;
-            this.btInitStorage.Text = "Создать";
+            this.btInitStorage.Text = "Подключиться";
             this.btInitStorage.UseVisualStyleBackColor = true;
             this.btInitStorage.Click += new System.EventHandler(this.btInitStorage_Click);
             // 
@@ -304,9 +324,9 @@ namespace OtusGraduationWork
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(22, 302);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(454, 32);
+            this.label5.Size = new System.Drawing.Size(335, 32);
             this.label5.TabIndex = 11;
-            this.label5.Text = "Ограничение размера лога, байт";
+            this.label5.Text = "Ограничение WAL, байт";
             // 
             // nmIndexLimit
             // 
@@ -335,9 +355,9 @@ namespace OtusGraduationWork
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(22, 251);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(503, 32);
+            this.label4.Size = new System.Drawing.Size(399, 32);
             this.label4.TabIndex = 9;
-            this.label4.Text = "Ограничение размера индекса, байт";
+            this.label4.Text = "Ограничение memtable, байт";
             // 
             // nmPartSize
             // 
@@ -366,9 +386,9 @@ namespace OtusGraduationWork
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(21, 202);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(426, 32);
+            this.label3.Size = new System.Drawing.Size(489, 32);
             this.label3.TabIndex = 7;
-            this.label3.Text = "Размер сегмента данных, байт";
+            this.label3.Text = "Размер сегмента sparse index, байт";
             // 
             // btSelectImagesFolder
             // 
@@ -451,13 +471,68 @@ namespace OtusGraduationWork
             this.tabPage1.Controls.Add(this.btAddRecords);
             this.tabPage1.Controls.Add(this.nmAddRecordCount);
             this.tabPage1.Controls.Add(this.label8);
+            this.tabPage1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.tabPage1.Location = new System.Drawing.Point(10, 48);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(1495, 260);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Добавление";
+            this.tabPage1.Text = "SET";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // btSelectAddValue
+            // 
+            this.btSelectAddValue.Location = new System.Drawing.Point(563, 91);
+            this.btSelectAddValue.Name = "btSelectAddValue";
+            this.btSelectAddValue.Size = new System.Drawing.Size(161, 50);
+            this.btSelectAddValue.TabIndex = 10;
+            this.btSelectAddValue.Text = "обзор";
+            this.btSelectAddValue.UseVisualStyleBackColor = true;
+            this.btSelectAddValue.Click += new System.EventHandler(this.btSelectAddValue_Click);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(279, 101);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(144, 32);
+            this.label13.TabIndex = 9;
+            this.label13.Text = "Значение";
+            // 
+            // pbAddValue
+            // 
+            this.pbAddValue.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbAddValue.Location = new System.Drawing.Point(442, 79);
+            this.pbAddValue.Name = "pbAddValue";
+            this.pbAddValue.Size = new System.Drawing.Size(100, 92);
+            this.pbAddValue.TabIndex = 8;
+            this.pbAddValue.TabStop = false;
+            // 
+            // tbAddKey
+            // 
+            this.tbAddKey.Location = new System.Drawing.Point(845, 98);
+            this.tbAddKey.Name = "tbAddKey";
+            this.tbAddKey.Size = new System.Drawing.Size(438, 38);
+            this.tbAddKey.TabIndex = 7;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(753, 101);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(86, 32);
+            this.label12.TabIndex = 6;
+            this.label12.Text = "Ключ";
+            // 
+            // btAddRecord
+            // 
+            this.btAddRecord.Location = new System.Drawing.Point(1289, 91);
+            this.btAddRecord.Name = "btAddRecord";
+            this.btAddRecord.Size = new System.Drawing.Size(196, 50);
+            this.btAddRecord.TabIndex = 5;
+            this.btAddRecord.Text = "Добавить";
+            this.btAddRecord.UseVisualStyleBackColor = true;
+            this.btAddRecord.Click += new System.EventHandler(this.btAddRecord_Click);
             // 
             // nmAddKeysInterval
             // 
@@ -477,7 +552,7 @@ namespace OtusGraduationWork
             this.nmAddKeysInterval.Size = new System.Drawing.Size(234, 38);
             this.nmAddKeysInterval.TabIndex = 4;
             this.nmAddKeysInterval.Value = new decimal(new int[] {
-            10000,
+            1000000,
             0,
             0,
             0});
@@ -520,7 +595,7 @@ namespace OtusGraduationWork
             this.nmAddRecordCount.Size = new System.Drawing.Size(211, 38);
             this.nmAddRecordCount.TabIndex = 1;
             this.nmAddRecordCount.Value = new decimal(new int[] {
-            10000,
+            100000,
             0,
             0,
             0});
@@ -549,8 +624,34 @@ namespace OtusGraduationWork
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(1495, 260);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Удаление";
+            this.tabPage2.Text = "REMOVE";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // tbRemoveKey
+            // 
+            this.tbRemoveKey.Location = new System.Drawing.Point(845, 101);
+            this.tbRemoveKey.Name = "tbRemoveKey";
+            this.tbRemoveKey.Size = new System.Drawing.Size(438, 38);
+            this.tbRemoveKey.TabIndex = 16;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(753, 104);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(86, 32);
+            this.label17.TabIndex = 15;
+            this.label17.Text = "Ключ";
+            // 
+            // btRemoveKey
+            // 
+            this.btRemoveKey.Location = new System.Drawing.Point(1287, 94);
+            this.btRemoveKey.Name = "btRemoveKey";
+            this.btRemoveKey.Size = new System.Drawing.Size(196, 50);
+            this.btRemoveKey.TabIndex = 14;
+            this.btRemoveKey.Text = "Удалить";
+            this.btRemoveKey.UseVisualStyleBackColor = true;
+            this.btRemoveKey.Click += new System.EventHandler(this.btRemoveKey_Click);
             // 
             // nmRemoveKeysInterval
             // 
@@ -570,7 +671,7 @@ namespace OtusGraduationWork
             this.nmRemoveKeysInterval.Size = new System.Drawing.Size(234, 38);
             this.nmRemoveKeysInterval.TabIndex = 9;
             this.nmRemoveKeysInterval.Value = new decimal(new int[] {
-            10000,
+            1000000,
             0,
             0,
             0});
@@ -613,7 +714,7 @@ namespace OtusGraduationWork
             this.nmRemoveRecordCount.Size = new System.Drawing.Size(214, 38);
             this.nmRemoveRecordCount.TabIndex = 6;
             this.nmRemoveRecordCount.Value = new decimal(new int[] {
-            10000,
+            100000,
             0,
             0,
             0});
@@ -643,62 +744,52 @@ namespace OtusGraduationWork
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Size = new System.Drawing.Size(1495, 260);
             this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Поиск";
+            this.tabPage3.Text = "GET";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // btAddRecord
+            // label15
             // 
-            this.btAddRecord.Location = new System.Drawing.Point(1289, 91);
-            this.btAddRecord.Name = "btAddRecord";
-            this.btAddRecord.Size = new System.Drawing.Size(196, 50);
-            this.btAddRecord.TabIndex = 5;
-            this.btAddRecord.Text = "Добавить";
-            this.btAddRecord.UseVisualStyleBackColor = true;
-            this.btAddRecord.Click += new System.EventHandler(this.btAddRecord_Click);
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(279, 100);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(144, 32);
+            this.label15.TabIndex = 15;
+            this.label15.Text = "Значение";
             // 
-            // label12
+            // pbFindValue
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(753, 101);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(86, 32);
-            this.label12.TabIndex = 6;
-            this.label12.Text = "Ключ";
+            this.pbFindValue.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbFindValue.Location = new System.Drawing.Point(442, 78);
+            this.pbFindValue.Name = "pbFindValue";
+            this.pbFindValue.Size = new System.Drawing.Size(100, 92);
+            this.pbFindValue.TabIndex = 14;
+            this.pbFindValue.TabStop = false;
             // 
-            // tbAddKey
+            // tbFindKey
             // 
-            this.tbAddKey.Location = new System.Drawing.Point(845, 98);
-            this.tbAddKey.Name = "tbAddKey";
-            this.tbAddKey.Size = new System.Drawing.Size(438, 38);
-            this.tbAddKey.TabIndex = 7;
+            this.tbFindKey.Location = new System.Drawing.Point(845, 104);
+            this.tbFindKey.Name = "tbFindKey";
+            this.tbFindKey.Size = new System.Drawing.Size(438, 38);
+            this.tbFindKey.TabIndex = 13;
             // 
-            // pbAddValue
+            // label16
             // 
-            this.pbAddValue.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbAddValue.Location = new System.Drawing.Point(442, 79);
-            this.pbAddValue.Name = "pbAddValue";
-            this.pbAddValue.Size = new System.Drawing.Size(100, 92);
-            this.pbAddValue.TabIndex = 8;
-            this.pbAddValue.TabStop = false;
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(753, 107);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(86, 32);
+            this.label16.TabIndex = 12;
+            this.label16.Text = "Ключ";
             // 
-            // label13
+            // btFindRecord
             // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(279, 101);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(144, 32);
-            this.label13.TabIndex = 9;
-            this.label13.Text = "Значение";
-            // 
-            // btSelectAddValue
-            // 
-            this.btSelectAddValue.Location = new System.Drawing.Point(563, 91);
-            this.btSelectAddValue.Name = "btSelectAddValue";
-            this.btSelectAddValue.Size = new System.Drawing.Size(161, 50);
-            this.btSelectAddValue.TabIndex = 10;
-            this.btSelectAddValue.Text = "обзор";
-            this.btSelectAddValue.UseVisualStyleBackColor = true;
-            this.btSelectAddValue.Click += new System.EventHandler(this.btSelectAddValue_Click);
+            this.btFindRecord.Location = new System.Drawing.Point(1289, 97);
+            this.btFindRecord.Name = "btFindRecord";
+            this.btFindRecord.Size = new System.Drawing.Size(196, 50);
+            this.btFindRecord.TabIndex = 11;
+            this.btFindRecord.Text = "Найти";
+            this.btFindRecord.UseVisualStyleBackColor = true;
+            this.btFindRecord.Click += new System.EventHandler(this.btFindRecord_Click);
             // 
             // nmFindKeysInterval
             // 
@@ -718,7 +809,7 @@ namespace OtusGraduationWork
             this.nmFindKeysInterval.Size = new System.Drawing.Size(234, 38);
             this.nmFindKeysInterval.TabIndex = 9;
             this.nmFindKeysInterval.Value = new decimal(new int[] {
-            10000,
+            1000000,
             0,
             0,
             0});
@@ -775,93 +866,15 @@ namespace OtusGraduationWork
             this.label14.TabIndex = 5;
             this.label14.Text = "Количество операций";
             // 
-            // label15
+            // button1
             // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(279, 100);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(144, 32);
-            this.label15.TabIndex = 15;
-            this.label15.Text = "Значение";
-            // 
-            // pbFindValue
-            // 
-            this.pbFindValue.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbFindValue.Location = new System.Drawing.Point(442, 78);
-            this.pbFindValue.Name = "pbFindValue";
-            this.pbFindValue.Size = new System.Drawing.Size(100, 92);
-            this.pbFindValue.TabIndex = 14;
-            this.pbFindValue.TabStop = false;
-            // 
-            // tbFindKey
-            // 
-            this.tbFindKey.Location = new System.Drawing.Point(845, 104);
-            this.tbFindKey.Name = "tbFindKey";
-            this.tbFindKey.Size = new System.Drawing.Size(438, 38);
-            this.tbFindKey.TabIndex = 13;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(753, 107);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(86, 32);
-            this.label16.TabIndex = 12;
-            this.label16.Text = "Ключ";
-            // 
-            // btFindRecord
-            // 
-            this.btFindRecord.Location = new System.Drawing.Point(1289, 97);
-            this.btFindRecord.Name = "btFindRecord";
-            this.btFindRecord.Size = new System.Drawing.Size(196, 50);
-            this.btFindRecord.TabIndex = 11;
-            this.btFindRecord.Text = "Найти";
-            this.btFindRecord.UseVisualStyleBackColor = true;
-            this.btFindRecord.Click += new System.EventHandler(this.btFindRecord_Click);
-            // 
-            // lbTablesSize
-            // 
-            this.lbTablesSize.AutoSize = true;
-            this.lbTablesSize.ForeColor = System.Drawing.Color.Gray;
-            this.lbTablesSize.Location = new System.Drawing.Point(747, 396);
-            this.lbTablesSize.Name = "lbTablesSize";
-            this.lbTablesSize.Size = new System.Drawing.Size(0, 32);
-            this.lbTablesSize.TabIndex = 28;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(22, 396);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(292, 32);
-            this.label18.TabIndex = 27;
-            this.label18.Text = "Размер таблиц, байт";
-            // 
-            // tbRemoveKey
-            // 
-            this.tbRemoveKey.Location = new System.Drawing.Point(845, 101);
-            this.tbRemoveKey.Name = "tbRemoveKey";
-            this.tbRemoveKey.Size = new System.Drawing.Size(438, 38);
-            this.tbRemoveKey.TabIndex = 16;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(753, 104);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(86, 32);
-            this.label17.TabIndex = 15;
-            this.label17.Text = "Ключ";
-            // 
-            // btRemoveKey
-            // 
-            this.btRemoveKey.Location = new System.Drawing.Point(1287, 94);
-            this.btRemoveKey.Name = "btRemoveKey";
-            this.btRemoveKey.Size = new System.Drawing.Size(196, 50);
-            this.btRemoveKey.TabIndex = 14;
-            this.btRemoveKey.Text = "Удалить";
-            this.btRemoveKey.UseVisualStyleBackColor = true;
-            this.btRemoveKey.Click += new System.EventHandler(this.btRemoveKey_Click);
+            this.button1.Location = new System.Drawing.Point(753, 553);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(215, 50);
+            this.button1.TabIndex = 29;
+            this.button1.Text = "Отключиться";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Mainform
             // 
@@ -871,8 +884,9 @@ namespace OtusGraduationWork
             this.Controls.Add(this.tableLayoutPanel1);
             this.MaximizeBox = false;
             this.Name = "Mainform";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "KvStorage";
+            this.Text = "LSM-Tree";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.gbFolders.ResumeLayout(false);
             this.gbFolders.PerformLayout();
@@ -882,6 +896,7 @@ namespace OtusGraduationWork
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAddValue)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nmAddKeysInterval)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nmAddRecordCount)).EndInit();
             this.tabPage2.ResumeLayout(false);
@@ -890,10 +905,9 @@ namespace OtusGraduationWork
             ((System.ComponentModel.ISupportInitialize)(this.nmRemoveRecordCount)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbAddValue)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFindValue)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nmFindKeysInterval)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nmFindRecordCount)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbFindValue)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -963,6 +977,7 @@ namespace OtusGraduationWork
         private System.Windows.Forms.TextBox tbRemoveKey;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Button btRemoveKey;
+        private System.Windows.Forms.Button button1;
     }
 }
 

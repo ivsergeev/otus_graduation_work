@@ -248,5 +248,16 @@ namespace OtusGraduationWork
 
             RefreshStoreInfo();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (_store != null)
+            {
+                _store.Dispose();
+                _store = null;
+            }
+
+            RefreshStoreInfo();
+        }
     }
 }

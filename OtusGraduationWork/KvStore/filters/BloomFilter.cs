@@ -125,31 +125,15 @@ namespace OtusGraduationWork.KvStore.filters
 			return Math.Abs((int)resultingHash);
 		}
 
-		private byte[] BITS = new byte[] { 0x80, 0x40, 0x20, 0x10, 0x08, 0x04, 0x02, 0x01 };
-		private byte GetByte(BitArray array, int index)
-		{
-			var result = default(byte);
-			for (int i = 0; i < 8; i++)
-			{
-				if (index + i < array.Count && array[index + i])
-				{
-					result += BITS[i];
-				}
-			}
-			return result;
-		}
-
 		public void Write(Stream stream)
 		{
 			using (var writer = new BinaryWriter(stream, Encoding.UTF8, true))
 			{
 				writer.Write(_hashFunctionCount);
 				writer.Write(_hashBits.Count);
-
-				var bytesCount = (int)Math.Ceiling(_hashBits.Count / 8m);
-				for (int i = 0; i < bytesCount; i++)
+				for (int i = 0; i < _hashBits.Count; i++)
 				{
-					writer.Write(GetByte(_hashBits, i * 8));
+					writer.Write(_hashBits[i] ? (byte)0x01 : (byte)0x00);
 				}
 			}
 		}
@@ -159,12 +143,11 @@ namespace OtusGraduationWork.KvStore.filters
 			using (var reader = new BinaryReader(stream, Encoding.UTF8, true))
 			{
 				var hashFunctionCount = reader.ReadInt32();
-
 				var hashBitsCount = reader.ReadInt32();
-				var hashBytesCount = (int)Math.Ceiling(hashBitsCount / 8m);
-				var hashBitsData = reader.ReadBytes(hashBytesCount);
-				var hashBits = new BitArray(hashBitsData);
-				hashBits.Length = hashBitsCount;
+				var hashBitsData = reader.ReadBytes(hashBitsCount);
+				var hashBits = new BitArray(hashBitsCount);
+				for (int i = 0; i < hashBitsCount; i++)
+					hashBits[i] = hashBitsData[i] != 0;
 
 				return new BloomFilter(hashFunctionCount, hashBits);
 			}

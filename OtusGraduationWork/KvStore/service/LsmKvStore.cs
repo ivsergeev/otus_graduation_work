@@ -11,9 +11,9 @@ namespace OtusGraduationWork.KvStore.service
 {
     public sealed class LsmKvStore : IDisposable
     {
-        public static string TABLE = ".table";
-        public static string LOG = "log";
-        public static string LOG_TMP = "logTmp";
+        public static string TABLE = ".sstable";
+        public static string LOG = "WAL";
+        public static string LOG_TMP = "WALTmp";
 
         private string _dataDir;
         private int _partSize;
@@ -260,7 +260,13 @@ namespace OtusGraduationWork.KvStore.service
             while (logStream.Position < logStream.Length - 1)
             {
                 var command = Command.Read(logStream);
-                _index.Set(command.Key, command);
+                var prevCommand = _index.Set(command.Key, command);
+
+                _indexLength += command.Length;
+                if (prevCommand != null)
+                {
+                    _indexLength -= prevCommand.Length;
+                }
             }
         }
     }
